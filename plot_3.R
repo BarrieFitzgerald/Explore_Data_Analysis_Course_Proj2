@@ -20,6 +20,8 @@ MD <- subset(NEI, fips == '24510')
 MD$year <- as.factor(MD$year)
 
 ## Plotting and saving the data graph
+setwd("C:/Users/bdfitzgerald/Desktop/Data Science Specialist/
+      exploratory_data_analysis/course_project_2")
 library(ggplot2)
 png('plot_3.png', width = 800, height = 500, units = 'px')
 ggplot(data = MD, aes(x = year, y = log(Emissions))) + 

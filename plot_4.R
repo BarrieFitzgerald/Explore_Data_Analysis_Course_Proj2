@@ -16,6 +16,8 @@ merge.sum <- aggregate(merge[, 'Emissions'], by = list(merge$year), sum)
 colnames(merge.sum) <- c('Year', 'Emissions')
 
 ## Plotting and saving the data graph
+setwd("C:/Users/bdfitzgerald/Desktop/Data Science Specialist/
+      exploratory_data_analysis/course_project_2")
 library(ggplot2)
 png(filename = 'plot_4.png')
 ggplot(data = merge.sum, aes(x = Year, y = Emissions / 1000)) + 

@@ -17,6 +17,8 @@ Emissions <- aggregate(NEI[, 'Emissions'], by = list(NEI$year), FUN = sum)
 Emissions$PM <- round(Emissions[, 2]/1000, 2)
 
 ## Plotting and saving the data graph
+setwd("C:/Users/bdfitzgerald/Desktop/Data Science Specialist/
+      exploratory_data_analysis/course_project_2")
 png(filename = "plot_1.png")
 barplot(Emissions$PM, names.arg = Emissions$Group.1, 
         main = expression('Total Emission of PM'[2.5]), 

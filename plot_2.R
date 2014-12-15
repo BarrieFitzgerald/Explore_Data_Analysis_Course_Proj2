@@ -16,6 +16,8 @@ NEI_sample <- NEI[sample(nrow(NEI), size = 100, replace = FALSE),]
 MD <- subset(NEI, fips == '24510')
 
 ## Plotting and saving the data graph
+setwd("C:/Users/bdfitzgerald/Desktop/Data Science Specialist/
+      exploratory_data_analysis/course_project_2")
 png(filename = 'plot_2.png')
 barplot(tapply(X = MD$Emissions, INDEX = MD$year, FUN = sum), 
         main = 'Total Emission in Baltimore City, MD', 
