@@ -18,5 +18,7 @@ Emissions$PM <- round(Emissions[, 2]/1000, 2)
 
 ## Plotting and saving the data graph
 png(filename = "plot_1.png")
-barplot(Emissions$PM, names.arg = Emissions$Group.1, main = expression('Total Emission of PM'[2.5]), xlab = 'Year', ylab = expression(paste('PM', ''[2.5], ' in Kilotons')))
+barplot(Emissions$PM, names.arg = Emissions$Group.1, 
+        main = expression('Total Emission of PM'[2.5]), 
+        xlab = 'Year', ylab = expression(paste('PM', ''[2.5], ' in Kilotons')))
 dev.off()

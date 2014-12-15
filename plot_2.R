@@ -16,5 +16,7 @@ MD <- subset(NEI, fips == '24510')
 
 ## Plotting and saving the data graph
 png(filename = 'plot_2.png')
-barplot(tapply(X = MD$Emissions, INDEX = MD$year, FUN = sum), main = 'Total Emission in Baltimore City, MD', xlab = 'Year', ylab = expression('PM'[2.5]))
+barplot(tapply(X = MD$Emissions, INDEX = MD$year, FUN = sum), 
+        main = 'Total Emission in Baltimore City, MD', 
+        xlab = 'Year', ylab = expression('PM'[2.5]))
 dev.off()
