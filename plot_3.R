@@ -1,8 +1,9 @@
 ## Reading the data file
-SCC <- readRDS("data/Source_Classification_Code.rds")
-NEI <- readRDS("data/summarySCC_PM25.rds")
+setwd("C:/Users/bdfitzgerald/Desktop/Data Science Specialist/exploratory_data_analysis/course_project_2/data/data")
+SCC <- readRDS("Source_Classification_Code.rds")
+NEI <- readRDS("summarySCC_PM25.rds")
 
-## Question 2: 
+## Question 3: 
 ## Of the four types of sources indicated by the type 
 ## (point, nonpoint, onroad, nonroad) variable, which 
 ## of these four sources have seen decreases in emissions
@@ -19,6 +20,7 @@ MD <- subset(NEI, fips == '24510')
 MD$year <- as.factor(MD$year)
 
 ## Plotting and saving the data graph
+library(ggplot2)
 png('plot_3.png', width = 800, height = 500, units = 'px')
 ggplot(data = MD, aes(x = year, y = log(Emissions))) + 
         facet_grid(. ~ type) + guides(fill = F) + 

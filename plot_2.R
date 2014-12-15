@@ -1,6 +1,7 @@
 ## Reading the data file
-SCC <- readRDS("data/Source_Classification_Code.rds")
-NEI <- readRDS("data/summarySCC_PM25.rds")
+setwd("C:/Users/bdfitzgerald/Desktop/Data Science Specialist/exploratory_data_analysis/course_project_2/data/data")
+SCC <- readRDS("Source_Classification_Code.rds")
+NEI <- readRDS("summarySCC_PM25.rds")
 
 ## Question 2: 
 ## Have total emissions from PM2.5 decreased in the 

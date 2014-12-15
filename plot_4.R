@@ -1,6 +1,7 @@
 ## Reading the data file
-SCC <- readRDS("data/Source_Classification_Code.rds")
-NEI <- readRDS("data/summarySCC_PM25.rds")
+setwd("C:/Users/bdfitzgerald/Desktop/Data Science Specialist/exploratory_data_analysis/course_project_2/data/data")
+SCC <- readRDS("Source_Classification_Code.rds")
+NEI <- readRDS("summarySCC_PM25.rds")
 
 ## Question 4: 
 ## Across the United States, how have emissions from 
@@ -15,6 +16,7 @@ merge.sum <- aggregate(merge[, 'Emissions'], by = list(merge$year), sum)
 colnames(merge.sum) <- c('Year', 'Emissions')
 
 ## Plotting and saving the data graph
+library(ggplot2)
 png(filename = 'plot_4.png')
 ggplot(data = merge.sum, aes(x = Year, y = Emissions / 1000)) + 
         geom_line(aes(group = 1, col = Emissions)) + 
